@@ -2,11 +2,13 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: backend-config
-  namespace: app   # <--- Corrigido aqui
+  namespace: app
 data:
   DB_HOST: "postgres.database.svc.cluster.local"
   DB_PORT: "5432"
   DB_NAME: "mensagensdb"
+  DB_USER: "postgres"
+  DB_PASSWORD: "postgres"
   API_HOST: "0.0.0.0"
   API_PORT: "5000"
 
